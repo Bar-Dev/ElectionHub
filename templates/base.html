@@ -1,14 +1,10 @@
-{% load static %}
-
 <!doctype html>
 <html lang="en">
-  <head>
-
-    {% block meta %}
+<head>
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% endblock %}
 
     <link rel="shortcut icon" type="image/jpg" href="" />
 
@@ -35,8 +31,11 @@
     {% endblock %}
 
     <title>Election Hub{% block extra_title %}{% endblock %}</title>
-  </head>
+</head>
 <body>
+  <nav class="navbar sticky-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Election Hub</a>
+  </nav>
 
   {% if messages %}
     <div class="message-container"></div>
@@ -51,5 +50,16 @@
   {% block postloadjs %}
   {% endblock %}
 
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-text">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Phasellus imperdiet nulla et dictum.</p>
+        <p>Nisi lorem egestas odio.</p>
+        <p>Vitae scelerisque enim ligula venenatis.</p>
+        <p>Maecenas nisl est, ultrices nec.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
